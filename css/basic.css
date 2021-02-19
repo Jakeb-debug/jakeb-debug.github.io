@@ -1,0 +1,24 @@
+*       {   
+            font-family: 'Fira Sans', sans-serif;
+            /*background: black;
+            color: white;*/
+                                                    }
+
+
+h1      {
+            font-family: 'Exo', sans-serif;
+            font-weight: bold;
+            color: white;
+            background: black;
+                                                    }
+h3.subscribe
+        {
+            color: white;
+            display: inline;
+                                                    }
+
+input.typeNumber
+        {
+            color: white;
+            display: inline;
+                                                    }

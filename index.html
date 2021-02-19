@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<title>Rocket Game Test</title>
+	<!-- MDB icon -->
+	<!-- <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" /> -->
+	<!-- Font Awesome -->
+	<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+	rel="stylesheet"
+	/>
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/basic.css"> <!-- Our basic CSS is here -->
+	<!-- <link rel="stylesheet" href="css/mdb.min.css"> -->
+	<!-- <link rel="stylesheet" href="css/custom.css"> --> <!-- To Plauy with the Spinner -->
+</head>
+
+<body>
+	<!-- Start Main Body -->
+
+    <div id="loader-wrapper">
+    	<div id="loader"></div>
+    	<div class="loader-section section-left"></div>
+    	<div class="loader-section section-right"></div>
+    </div>
+
+    <div id=titlediv>
+    	<h1 id="title" align="center">Rocket Game</h1>
+    </div>
+    <div class="container"> <!-- This container holds the input fields-->
+    	<div class="d-flex justify-content-center align-items-top"> <!-- Input Fields group 1-->
+
+    		<div class="form-check">
+    			<input class="form-check-input" type="checkbox" value="" id="prop_on_off">
+    			<label class="form-check-label" for="flexCheckDefault">Property On/Off</label>
+    		</div>
+    		<hspace/>
+    		<div class="form-outline">
+    			<input type="text" id="fuel_amount" class="form-control-sm" align="left" />
+    			<label class="form-label" for="typeNumber">Fuel Amount</label>
+    		</div>
+
+    		<div class="form-outline">
+    			<input type="text" id="fuel_quality" class="form-control-sm" align="center"/>
+    			<label class="form-label" for="typeNumber">Fuel Quality</label>
+    		</div>
+
+    		<div class="form-outline">
+    			<input type="text" id="other_input" class="form-control-sm" align="right"/>
+    			<label class="form-label" for="typeNumber">Some Other Input</label>
+    		</div>
+
+    	</div>
+
+	</div>
+	<hr/>
+	<div class="container"> <!-- This container holds your text stuff-->
+		<h3> Description </h3>
+		<p> 
+				Put your game description here
+		</p>
+	</div>
+
+
+    <div class="container">  <!-- This container holds the first example-->
+		<h3> Diagram Example </h3>
+		<div class="text-center">
+        <canvas id="bubbleChart" width="1200" height="300" style="border:2px solid #000000;"></canvas>
+        <hr/>
+        <button id="example" type="button" >Show Example Calculation</button>
+		<button id="inputs" type="button" >Calculate with your values</button>
+		<hr/>
+    	</div>
+
+    </div>
+
+    <div class="container">  <!-- This container holds the calculation example-->
+		<h3> Calculation Example </h3>
+		<div class="text-center">
+        <canvas id="bubbleChart2" width="1200" height="300" style="border:2px solid #000000;"></canvas>
+        <hr/>
+		<p id=explained2> Explanation here: even a formula `sum_(i=1)^n i^3=((n(n+1))/2)^2`</p>
+    	</div>
+
+    </div>
+
+    <div class="container">  <!-- This container holds the user calculation-->
+		<h3> Your Output </h3>
+		<div class="text-center">
+        <canvas id="bubbleChart3" width="1200" height="300" style="border:2px solid #000000;"></canvas>
+        <hr/>
+		<!-- <div id=explained3> Explanation </div> -->
+    	</div>
+
+    </div>
+<!-- End Main Body-->
+
+<!--Get your javascript here! -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.2.0/mdb.min.js"></script>                      <!-- MDB basic js, maybe replace with bootstrap js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 						<!-- jQuery lets us manipulate the webpage easier-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script> 					<!-- We're using Charts to create the plots -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> 									<!-- MathJax req -->
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>   <!-- MathJax can let us write equations on the page -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=AM_CHTML"></script>          <!-- and ASCII Math makes the editing like LaTex -->
+<script src="js/bubble.js"></script>																			<!-- This is our custom js work -->
+<!-- Just a note for anyone who looks, I think its a limitation from hosting via github, but updating charts does not seem to work appropriately -->
+</body>
+</html>

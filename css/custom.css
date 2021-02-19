@@ -1,0 +1,157 @@
+*       {   
+            font-family: 'Fira Sans', sans-serif;
+                                                    }
+
+
+h1      {
+            font-family: 'Exo', sans-serif;
+            font-weight: bold;
+                                                    }
+h3.subscribe
+        {
+            color: white;
+            display: inline;
+                                                    }
+
+body.blog
+        {
+        
+                                                    }
+
+div.full_loaded #loader-wrapper .loader-section.section-left 
+            {
+                -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: translateX(-100%);  /* IE 9 */
+                transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+                                                    }
+ 
+   .full_loaded #loader-wrapper .loader-section.section-right 
+            {
+                -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+                -ms-transform: translateX(100%);  /* IE 9 */
+                transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+                                                    }
+   .full_loaded #loader 
+            {
+                opacity: 0;
+                                                    }
+
+   .full_loaded #loader-wrapper 
+            {
+                visibility: hidden;
+                                                    }
+
+   .full_loaded #loader 
+            {
+                opacity: 0;
+                -webkit-transition: all 0.3s ease-out; 
+                transition: all 0.3s ease-out;
+                                                    }
+   .full_loaded #loader-wrapper 
+            {
+                -webkit-transform: translateY(-100%);
+                -ms-transform: translateY(-100%);
+                transform: translateY(-100%);
+ 
+                -webkit-transition: all 0.3s 0.6s ease-out; 
+                transition: all 0.3s 0.6s ease-out;
+                                                    }
+
+    #loader-wrapper
+            {
+                position:fixed;
+                top:0;
+                left:0;
+                height:100%;
+                width:100%;
+                z-index:1000; 
+                                                    }
+    #loader {
+                display:block;
+                position:relative;
+                border: 6px solid transparent;
+                left:50%;
+                top:50%;
+                border-top-color: #29567A;
+                border-radius: 50%;
+                height:120px;
+                width:120px;
+                margin: -60px 0 0 -60px;
+                z-index:1500;
+                -webkit-animation: spin 2.5s linear infinite;
+                animation: spin 5s linear infinite;
+ 
+                                                                }
+                                
+    #loader-wrapper.loader-section
+            {
+                position:fixed;
+                top:0;
+                width:51%;
+                height:100%;
+                background: #111111;
+                z-index:1000;
+                                                    }
+    #loader-wrapper.loader-section.section-left
+            {
+                left:0;
+                                                    }
+    #loader-wrapper.loader-section.section-right
+            {
+                right:0;
+                                                    }
+
+    #loader:before
+            {
+                content: "";
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                bottom: 5px;
+                border: 5px solid transparent;
+                border-top-color: #5957C7;
+                border-radius: 50%;
+                -webkit-animation: spin 4s linear infinite;
+                animation: spin 1s linear infinite;/*5*/
+                                                    }
+
+    #loader:after
+            {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: 15px;
+                right: 15px;
+                bottom: 15px;
+                border: 5px solid transparent;
+                border-top-color: #71CBD0;
+                border-radius: 50%;
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 2s linear infinite;/*3*/
+                                                    }
+
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
