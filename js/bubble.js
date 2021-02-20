@@ -116,7 +116,7 @@ $("#example").click(function() {
 			{
 			label: 'Rocket Distance',
 			data: [{
-				x: 6,
+				x: 6		, //TODO - put in my calculated value
 				y: 0,
 				r: 5
 			}],
@@ -147,9 +147,13 @@ $("#example").click(function() {
 
 // Calculate button click -> chart 3
 $("#inputs").click(function() {
- var val1 = parseInt($('#fuel_amount').val(), 10)
- var val2 = parseInt($('#fuel_quality').val(), 10)
- var val3 = parseInt($('#other_input').val(), 10)
+ var fuel_amount = parseInt($('#fuel_amount').val(), 10)
+ var fuel_quality = parseInt($('#fuel_quality').val(), 10)
+ //the rocket science variables
+ var m_2 = 2+(fuel_amount/fuel_quality)
+ var _F = m_2*fuel_quality
+ var rocket_x = _F + m_2
+ var rocket_accel = fuel_amount*fuel_quality
  var ctxBc = document.getElementById('bubbleChart3').getContext('2d');
  var bubbleChart = new Chart(ctxBc, {
 	type: 'bubble',
@@ -185,7 +189,7 @@ $("#inputs").click(function() {
 			{
 			label: 'Rocket Distance',
 			data: [{
-				x: val1 + val2 + val3,
+				x: 1 + rocket_x,
 				y: 0,
 				r: 5
 			}],
